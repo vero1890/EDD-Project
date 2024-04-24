@@ -5,7 +5,10 @@ right = 4
 middle = 27
 left = 23
 
-kick_array = []
+kick_array = [0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, ]
+snare_array = [0, 0, 1, ]
+hat_array = [0, 0, 1, ]
+bongo_array = [0, 0, 1, ]
 
 def setup():
   GPIO.setmode(GPIO.BCM)  # Numbers GPIOs by physical location
