@@ -26,11 +26,21 @@ def destroy():
   GPIO.output(middle, GPIO.LOW)
   GPIO.output(right, GPIO.LOW)
   GPIO.cleanup()  # Release resource
-
-
+  
 if __name__ == '__main__':  # Program start from here
   setup()
   try:
     loop()
   except KeyboardInterrupt:
     destroy()
+    GPIO.output(kickMotor, GPIO.LOW)
+    GPIO.output(snareMotor, GPIO.LOW)
+    GPIO.output(hatMotor, GPIO.LOW)
+    GPIO.cleanup()  # Release resource
+
+if __name__ == '__main__':
+    setup()
+    try:
+        loop()
+    except KeyboardInterrupt:
+        destroy()
