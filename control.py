@@ -37,10 +37,3 @@ if __name__ == '__main__':  # Program start from here
     GPIO.output(snareMotor, GPIO.LOW)
     GPIO.output(hatMotor, GPIO.LOW)
     GPIO.cleanup()  # Release resource
-
-if __name__ == '__main__':
-    setup()
-    try:
-        loop()
-    except KeyboardInterrupt:
-        destroy()
